@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="icon" href="img/logo.png" type="image/x-icon"/>
     <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/kostya.css">
 
     <title>Constantine Raykovskyy</title>
   </head>
@@ -15,7 +16,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 
       <a class="navbar-brand" href="#">
-        <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="img/logo.png" width="46" height="46" class="d-inline-block align-top" alt="">
         Constantine Raykovskyy
       </a>
 
@@ -25,9 +26,9 @@
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#about">About <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#gallery">Gallery</a>
-            <a class="nav-item nav-link" href="#contact">Contact</a>
+            <a class="nav-item nav-link active" href="#about">About</a>
+            <a class="nav-item nav-link active" href="#gallery">Gallery</a>
+            <a class="nav-item nav-link active" href="#contact">Contact</a>
         </div>
       </div>
     </nav>
@@ -35,74 +36,94 @@
     <!-- Jumbotron -->
     <div id="about" class="jumbotron m-0">
       <h1 class="display-5 pt-5">Brooklyn-based Contracting</h1>
-      <p class="lead">Professional contractor for personal and commercial buildings. Extensive experience with faux wood and stone painting.</p>
+      <p class="lead">Professional contractor for personal and commercial buildings. Extensive experience with faux wood and stone painting, as well as custom luxury paneling. Fluent in English, Russian, and Ukrainian.</p>
       <hr class="my-4">
-      <p>Available for work in the following areas of Brooklyn, NY:</p>
+      <p>Available for work in the following areas of New York City:</p>
 
       <ul>
-        <li><b>Bensonhurst</b></li>
+        <li><b>Bensonhurst</b> (11204, 11214)</li>
       </ul>
     </div>
 
     <!-- Gallery -->
-    <div id="gallery" class="jumbotron m-0 pt-4 pb-0 bg-white">
+    <div id="gallery" class="jumbotron m-0 mt-3 mb-5 pt-4 pb-0 bg-white">
       <h1 class="display-5 text-center">Gallery</h1>
     </div>
 
-    <div id="gallery" class="w3-content" style="max-width:600px;">
-      <div class="w3-row-padding w3-section">
-        <div class="w3-col s4">
-          <img class="demo w3-opacity w3-hover-opacity-off" src="img/IMG_0009.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+    <div id="gallery-content" class="container mt-4">
+
+      <div class="row">
+        <div class="col" data-toggle="modal" data-target="#imageModal">
+          <img src="img/IMG_0071.JPG">
         </div>
-        <div class="w3-col s4">
-          <img class="demo w3-opacity w3-hover-opacity-off" src="img/IMG_0020.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+        <div class="col" data-toggle="modal" data-target="#imageModal">
+          <img src="img/IMG_0099.JPG">
         </div>
-        <div class="w3-col s4">
-          <img class="demo w3-opacity w3-hover-opacity-off" src="img/IMG_0037.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+        <div class="col" data-toggle="modal" data-target="#imageModal">
+          <img src="img/IMG_0113.JPG">
         </div>
       </div>
 
-      <img class="mySlides" src="img/IMG_0009.jpg" style="width:100%;display:none">
-      <img class="mySlides" src="img/IMG_0020.jpg" style="width:100%;display:none">
-      <img class="mySlides" src="img/IMG_0037.jpeg" style="width:100%;display:none">
+      <div class="row">
+        <div class="col" data-toggle="modal" data-target="#imageModal">
+          <img src="img/IMG_0133.JPG">
+        </div>
+        <div class="col" data-toggle="modal" data-target="#imageModal">
+          <img src="img/IMG_0149.JPG">
+        </div>
+        <div class="col" data-toggle="modal" data-target="#imageModal">
+          <img src="img/IMG_0156.JPG">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col" data-toggle="modal" data-target="#imageModal">
+          <img src="img/IMG_0009.JPG">
+        </div>
+        <div class="col" data-toggle="modal" data-target="#imageModal">
+          <img src="img/IMG_0020.JPG">
+        </div>
+        <div class="col" data-toggle="modal" data-target="#imageModal">
+          <img src="img/IMG_0037.JPG">
+        </div>
+      </div>
+
     </div>
 
-    <script>
-    function currentDiv(n) {
-      showDivs(slideIndex = n);
-    }
-
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-      }
-      x[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " w3-opacity-off";
-    }
-
-    currentDiv(1);
-    </script>
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog"  aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="">
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Contact -->
-    <div id="gallery" class="jumbotron mt-5 pt-4 pb-0 bg-white">
+    <div id="contact" class="jumbotron mt-5 pt-4 pb-0 bg-white">
       <h1 class="display-5 text-center">Contact</h1>
     </div>
 
-    <div id="contact" class="media mt-5" style="width: 300px; margin-left: auto; margin-right: auto;">
-      <img src="img/logo.png" class="align-self-start mr-3" width="30" height="30"  alt="...">
+    <div id="contact-content" class="container media mt-5">
+      <img src="img/logo.png" class="align-self-start mr-3" width="120" height="120"  alt="...">
       <div class="media-body">
-        <h5 class="mt-0">Constantine Raykovskyy</h5>
-        <p><b>Email</b>  hello@constantineraykovskyy.com</p>
+        <h5 class="mt-0">Working Hours</h5>
+        <p><b>Monday-Friday</b>  9am to 5pm<br/>
+        <b>Saturday</b>  10am to 4pm</p>
       </div>
+
     </div> 
+
+    <div class="container contact-button mt-4 w-75"> 
+      <a href="mailto:constantineraykovskyy@gmail.com" role="button" class="btn btn-success btn-lg btn-block">Send an Email to constantineraykovskyy@gmail.com</a>
+    </div>
 
     <!-- Empty space -->
     <div style="height: 100px;"></div>
@@ -115,5 +136,6 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/kostya.js"></script>
   </body>
 </html>
